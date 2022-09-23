@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoteBook.MainPage">
+
+    <StackLayout>
+        <CollectionView x:Name="collectionView" SelectionMode="Single" SelectionChanged="collectionView_SelectionChenged">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                    <StackLayout Orientation="Horizontal" >
+                        <Label FontSize="25" Text="{Binding Id}"/>
+                        <Label FontSize="25" Text="{Binding Name}"/>
+                    </StackLayout>
+                </DataTemplate>
+        </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button x:Name="entryName" Text=" Добавить" Clicked="Button_Add"/>
+    </StackLayout>
+
+
+</ContentPage>
